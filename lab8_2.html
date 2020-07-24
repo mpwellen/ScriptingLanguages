@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var today = new Date();
+			var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000);
+
+			function setCookie (val)
+			{
+				document.cookie = "myName=" + val + "; expires=" + expiry;
+			}
+
+			function storeValues (form)
+			{
+				setCookie(form.elements[0].value)
+			}
+
+			function ReadCookie (name)
+			{
+				var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+
+				if (match)
+				{
+					console.log(name + " = " + match[2]);
+				}
+				else
+				{
+					console.log('--something went wrong---');
+				}
+			}
+
+			function GetCookie ()
+			{
+				ReadCookie(document.getElementsByName("customer")[0].value);
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myform" action="">
+			Enter name: <input type="text" name="customer" />
+			<input type="button" value="Set Cookie" onclick="storeValues(myform);" />
+		</form>
+		<hr />
+		Click the following button to get a cookie: <input type="button" onclick="GetCookie();" value="Get Cookie" />
+	</body>
+</html>

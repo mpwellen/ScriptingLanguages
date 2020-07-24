@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var today = new Date();
+			var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000);
+
+			function setCookie (val)
+			{
+				document.cookie = "myName=" + val + "; expires=" + expiry;
+			}
+
+			function storeValues (form)
+			{
+				setCookie(form.elements[0].value)
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myform" action="">
+			Enter name: <input type="text" name="customer" />
+			<input type="button" value="Set Cookie" onclick="storeValues(myform);" />
+		</form>
+	</body>
+</html>

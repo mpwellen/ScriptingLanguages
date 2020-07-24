@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div><h1>AJAX 1 - Tracking status changes</h1>
+		<button type="button" onclick="changeText('lab8_3.txt')">Success</button>
+		<button type="button" onclick="changeText('page_does_not_exist.txt')">Fail</button>
+		<br /><br /></div>
+
+		<div id="change"></div>
+
+		<script type="text/javascript">
+			function changeText (url)
+			{
+				var xhttp = new XMLHttpRequest();
+
+				xhttp.onreadystatechange = function ()
+				{
+					if (this.readyState == 1)
+					{
+						document.getElementById("change").innerHTML = "Server connection established.<br />";
+					}
+
+					else if (this.readyState == 2)
+					{
+						document.getElementById("change").innerHTML += "Request received.<br />";
+					}
+
+					else if (this.readyState == 3)
+					{
+						document.getElementById("change").innerHTML += "Processing request...<br />";
+					}
+
+					// Success
+					else if (this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("change").innerHTML += "Request finished. Response:<br />";
+						document.getElementById("change").innerHTML += "<code>" + this.responseText + "</code>";
+					}
+
+					// Failure
+					else if (this.readyState == 4 && this.status == 404)
+					{
+						document.getElementById("change").innerHTML = "Error 404: File does not exist!";
+					}
+				};
+
+				xhttp.open("GET", url, true);
+				xhttp.send();
+			}
+		</script>
+	</body>
+</html>
