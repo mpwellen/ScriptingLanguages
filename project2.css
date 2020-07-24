@@ -1,0 +1,13 @@
+body {
+	background: white;
+	color: black;
+}
+
+#image {
+	height: 256px;
+	width:  256px;
+	background: 
+	url('sprites.png') 0px 0px;
+	style=style="position:absolute;left:100; top:0;" height="50" width="50"
+
+}

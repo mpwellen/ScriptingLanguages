@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<link rel="stylesheet" href="lab5_5.css">
+	<script src="lab5_5.js"></script>
+</head>
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="column">
+			<input type="number" id="myNumber" value="2">
+			 <select class="form-control" id="currency-1" required>
+				  <option>PLN</option>
+				  <option>EUR</option>
+				  <option>USD</option>
+				  <option>test</option>
+				  <option>klingon</option>
+			</select>
+			<p>Click the button to get the number of the number field.</p>
+
+			<button onclick="myFunction()">Try it</button>
+
+				  </p>
+				</div>
+		<div class="columnB">
+			<p id="demo"</p>
+			  </div> 
+			</div>
+					  
+					</div>
+					
+					<div class="columnB">
+						<p id="demo"></p>
+						<span class="final-result"></span>
+						 <div class="row">
+						  <div class="col">
+					</div>
+				</div>	
+				</div>
+			</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myNumber").value;
+  var baseCurrencyInput = document.getElementById('currency-1').value;
+  if(baseCurrencyInput=="PLN"){
+	var american=x*100;
+	}
+	else if(baseCurrencyInput=="EUR"){
+		var american=x*200;
+	}
+  //convert to currencies
+  document.getElementById("demo").innerHTML = x*100;
+  document.getElementById("demoB").innerHTML= x*200;
+  document.getElementById("demoB").innerHTML= x*200;
+  document.getElementById("demoB").innerHTML= x*200;
+  
+}
+</script>
+</body>
+</html>

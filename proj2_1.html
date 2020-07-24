@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		</script>
+		<script src="proj2_1.js"></script>
+		<meta charset="utf-8">
+		<title>Project 2</title>
+	</head>
+	<body>
+		<h1>Project 2</h1>
+		<script src="proj2_1.js"></script>
+		<canvas id="myCanvas" width="500" height="500"
+		style="border:1px solid #000000;"></canvas>
+	</body>
+	<script>
+		$(document).ready(function(){
+			var c=document.getElementById("myCanvas");
+			var context=c.getContext("2d");
+			var x=c.width/2;
+			var y=c.height/2;
+			var length=50;
+			var level=4;
+			var ang=0;
+			ang=(ang/180)*Math.PI;
+			<!--drawSquare(x,y,length,level,context);-->
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.beginPath();
+			ctx.moveTo(c.width/2,c.height/2);
+			//drawBranch(x,y,ang,length,level);
+			//ctx.stroke();
+			draw(c.width/2,c.height/2,100,90,level);
+			}
+		)
+	</script>
+</html>

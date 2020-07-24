@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<!--[if gte IE 9]>
+<html class="no-js lt-ie9 animated-content no-animation-effects no-nice-scroll right-block-disabled no-preloader" lang="en-US" prefix="og: http://ogp.me/ns#">     
+<![endif]-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js no-nice-scroll right-click-block-disabled no-preloader no-animation-effects">
+<head>
+
+<script type="text/javascript">
+ window.onload = function() {
+    document.getElementById('ifYes').style.display = 'none';
+	document.getElementById('resumeBlock').style.display='block';
+}
+function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+        document.getElementById('ifYes').style.display = 'block';
+		document.getElementById('portfolio').style.display='block';
+		document.getElementById('services').style.display='block';
+		document.getElementById('hire').style.display='block';
+		document.getElementById('resumeBlock').style.display='none';
+    } 
+   else(document.getElementById('resumeCheck').checked){
+        document.getElementById('ifYes').style.display = 'none';
+		document.getElementById('portfolio').style.display='none';
+		document.getElementById('services').style.display='none';
+		document.getElementById('hire').style.display='none';
+		document.getElementById('resumeBlock').style.display='block';
+		}
+}
+
+</script>
+
+<!-- Meta Tags -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Mobile Internet Explorer ClearType Technology -->
+<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on"><![endif]-->
+
+<title>Michael Wellen </title>
+
+</head>
+
+<section id="Program Assist" class="main-content default-padding" style="background-color: #1a7777">
+<div class="text-block"><p style="text-align: center;font-size:48px"><span style="color: #ffffff;">Coding Assist</span></p>
+
+
+<button onclick="getLocation()">Calculate Area</button>
+
+<p id="demo"></p>
+
+ <script>
+var x = document.getElementById("demo");
+function getLocation() {
+  var num=6;
+  var pi=3.14;
+  var answer=num*num*3.14;
+  console.log(answer);
+}
+</script> 
+
+<button onclick="myNums()">Generate Number</button>
+
+<p id="demo"></p>
+
+<button onclick="myOrganizer()">Organize Items</button>
+
+<p id="demo"></p>
+
+<script>
+function myOrganizer() {
+    var strCreate = prompt("Please enter your name", "Doug Jones");
+	var result=" ";
+	var contacts = [];
+	var companies = [];
+	for(var i=0;i<strCreate.length;i++)
+	{
+		var test=strCreate[i];
+		j=i+1;
+		var testb=strCreate[j];
+		var letterNumber = /^[0-9a-zA-Z]+$/;
+		if(test==" ")
+		{
+			if(testb.match(letterNumber))
+			{
+				result=result+"+++";
+				contacts.push(strCreate);
+			}
+		}
+	}
+    if (result != null) {
+        alert("Hello " + result);
+    }
+}
+</script>
+
+<button onclick="testD()">Binary Reversal</button>
+
+<p id="demo"></p>
+
+<script>
+function testD(){
+	var str=prompt("enter number");
+	var arr=str.split("");
+	arr.sort();
+	var arrB=new Array(26);
+	var arrC=new Array(0);
+	var z;
+	var count=0;
+	var value=0;
+	for(z=0;z<26;z++)
+	{
+		arrB[z]=0;
+	}
+	var x;
+	var y;
+	var sum=0;
+	console.log(arr);
+	for(y=1;y<=str.length;y++)
+	{
+		x=y-1;
+		if(arr[x]==arr[y])
+		{
+			arrB[value]=arrB[value]+1;
+			sum=sum+1;
+		}
+		else
+		{
+			arrB[value]=arrB[value]+1;
+			arrC.push(arr[value]);
+			sum=sum+1;
+			value=value+1;
+
+		}
+	}
+	console.log(arrC);
+	console.log(arrB);
+}
+</script>
+
+
+<button onclick="testB()">Binary Reversal</button>
+
+<p id="demo"></p>
+
+<script>
+
+
+<button onclick="testC()">Binary Reversal</button>
+
+<p id="demo"></p>
+
+<script>
+function testC(){
+	var str=prompt("enter number");
+	var strB=prompt("enter number");
+	if(str==strB)
+	{
+		console.log("tie");
+	}
+	else if(str=="rock" && strB=="paper"){ console.log("rock win");}
+}
+</script>
+
+
+<button onclick="testB()">Binary Reversal</button>
+
+<p id="demo"></p>
+
+<script>
+function testB(){
+	var str=prompt("enter number");
+	var arr=str.split("");
+	
+	var count=1;
+	var sum=0;
+	for(var x=0;x<str.length;x++)
+	{
+		console.log(arr[x]);
+		if(arr[x]=='a' || arr[x]=='e' || arr[x]=='i' || arr[x]=='o' || arr[x]=='u')
+		{
+			sum=sum+1;
+		}
+	}
+	console.log(sum);
+}
+</script>
+
+
+<button onclick="test()">Binary Reversal</button>
+
+<p id="demo"></p>
+
+<script>
+function test(){
+	console.log("test");
+	var str=prompt("enter number");
+	var arr=str.split("");
+	var arrB=new Array(length);
+	var count=0;
+	console.log(arr);
+	while(count<arr.length)
+	{
+		console.log("test");
+		var rando=Math.floor(Math.random() * length);
+		var randoB=rando%length;
+		if(arr[randoB]!='p'){
+			arrB[count]=arr[randoB];
+			count=count+1;
+			arr[randoB]='p';
+		}
+		else{
+			continue;
+		}
+	}
+	
+	console.log(arrB);
+}
+</script>
+
+
+<button onclick="BinaryReversal()">Binary Reversal</button>
+
+<p id="demo"></p>
+
+<script>
+function BinaryReversal(){
+	var str=prompt("enter number");
+	var arr=str.split("");
+	
+	var count=1;
+	var sum=0;
+	for(var x=str.length;x--;x>0)
+	{
+		console.log(arr[x]);
+		if(arr[x]=='1')
+		{
+			sum=sum+count;
+		}
+		count=count*2;
+	}
+	console.log(sum);
+	alert("Converted: " + sum);
+	
+}
+</script>
+
+</section>
+
+		        		    		
+    	</section>
+</div>
+
+</div>
+<!-- End Main -->
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#">
+    <i class="back-top-icon"></i>
+</a>
+<!-- End Back to Top -->
+
+
+<!-- Footer -->
+<footer>
+      
+    
+<div class="footer-copyright">
+<p class="copyright">&copy; Copyright 2019 <a href="mpwellen.com">Michael Wellen // Software Dev &amp; </a> / Powered by <a href="http://aws.amazon.com" target="_blank">AWS</a></p>
+</div>
+
+<!-- End Footer -->
+</footer>
+
+
+</div>
+<!-- End Wrap -->
+
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myGame()">The Insult Game</button>
+
+<p id="demo"></p>
+
+<script>
+function myGame() {
+    var name = prompt("Please enter your move", "Bob Dole");
+	var team=prompt("What's your favorite move?", "favorite team")
+	if(name.equals(team){
+		console.log(tie);
+		}
+    if (name != null) {
+        alert("Hello " + name + "! You are not the president. Fuck the "+team+"!"+" Go enjoy "+country);
+    }
+	document.getElementById("demo").innerHTML="Sorry!";
+}
+</script>
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myNums()">Generate Number</button>
+
+<p id="demo"></p>
+
+<script>
+function myNums() {
+    var str = prompt("Please enter your number", "5");
+	console.log(str);
+	var arr=str.split("");
+	for(var x=0;x<arr.length;x++){
+		console.log(arr[x]);
+		}
+}
+</script>
+
+	
+<script language="javascript">
+    function changeImage() {
+
+        if (document.getElementById("imgClickAndChange").src == "https://media-cdn.tripadvisor.com/media/photo-s/07/51/0b/3a/megatour-tours-of-prague.jpg") 
+        {
+            document.getElementById("imgClickAndChange").src = "https://cdn.pixabay.com/photo/2014/07/31/18/11/prague-castle-406558_960_720.jpg";
+        }
+        else 
+        {
+            document.getElementById("imgClickAndChange").src = "https://media-cdn.tripadvisor.com/media/photo-s/07/51/0b/3a/megatour-tours-of-prague.jpg";
+        }
+    }
+</script>
+<script language="javascript">
+	function changeImage2() {
+
+        if (document.getElementById("imgClickAndChange2").src == "https://www.mrsmithworldphotography.com/photos/Tower-Bridge-and-City-Skyline-4.jpg")
+        {
+            document.getElementById("imgClickAndChange2").src = "http://ontheworldmap.com/uk/city/london/london-city-center-map.jpg";
+        }
+        else 
+        {
+            document.getElementById("imgClickAndChange2").src = "https://www.mrsmithworldphotography.com/photos/Tower-Bridge-and-City-Skyline-4.jpg";
+        }
+    }
+</script>
+<script>
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+	function drag(ev){
+		ev.dataTransfer.setData("text",ev.target.id);
+		}
+	function drop(ev) {
+		ev.preventDefault();
+		var data= ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+		}
+</script>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>		
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->	
+	
+</body>
+
+</html>
+
+
+<!-- Dynamic page generated in 3.424 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-01-22 20:37:06 -->
+
+<!-- super cache -->

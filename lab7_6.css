@@ -1,0 +1,23 @@
+body {
+	background: white;
+	color: black;
+}
+
+/*
+#demo{
+	position:absolute;
+	top:300;
+	left:300;
+	width:256px;
+	background-color:red;
+}
+*/
+
+#image {
+	height: 256px;
+	width:  256px;
+
+	background: 
+	url('sprites.png') 0px 0px;
+
+}
